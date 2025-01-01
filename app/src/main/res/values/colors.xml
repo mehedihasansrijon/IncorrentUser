@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Background Gradient -->
+    <color name="background_start">#712BF4</color>
+    <color name="background_mid">#5626F8</color>
+    <color name="background_end">#4B24F9</color>
+
+    <!-- Selection Colors -->
+    <color name="selection_color">#FFDD00</color> <!-- example selection color, modify as needed -->
+</resources>
