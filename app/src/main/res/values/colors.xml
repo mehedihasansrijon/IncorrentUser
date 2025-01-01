@@ -3,11 +3,18 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- Background Gradient -->
-    <color name="background_start">#712BF4</color>
-    <color name="background_mid">#5626F8</color>
-    <color name="background_end">#4B24F9</color>
-
     <!-- Selection Colors -->
-    <color name="selection_color">#FFDD00</color> <!-- example selection color, modify as needed -->
+    <!-- example selection color, modify as needed -->
+
+    <!-- Primary Colors -->
+    <color name="purple">#7D27EB</color>
+    <color name="gray">#9E9E9E</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#4CAF50</color>
+    <color name="spaces">#71A9F1</color>
+
+    <!-- Additional Colors -->
+    <color name="background_start">#712BF4</color>
+    <color name="background_end">#2575FC</color>
+    <color name="background_center">#4B24F9</color>
 </resources>

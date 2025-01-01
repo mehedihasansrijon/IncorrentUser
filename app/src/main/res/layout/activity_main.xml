@@ -1,169 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Top Gradient Background Section -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_350sdp"
-        android:background="@drawable/gradient_background"
-        />
+        android:layout_height="@dimen/_250sdp"
+        android:background="@drawable/top_wave_background" />
 
+    <!-- Background Image (Optional Overlay) -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_80sdp"
         android:scaleType="fitXY"
-        android:src="@drawable/bk" />
+        android:src="@drawable/wave_background" />
 
+    <!-- Logo Section -->
     <RelativeLayout
+        android:id="@+id/logo_section"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_190sdp"
-        android:id="@+id/first_layout"
-        >
+        android:layout_height="@dimen/_190sdp">
 
         <ImageView
-            android:layout_width="@dimen/_80sdp"
-            android:layout_height="@dimen/_75sdp"
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="@dimen/_80sdp"
             android:layout_centerInParent="true"
             android:background="@drawable/logo_bg"
-            android:src="@drawable/logo"
-            android:padding="@dimen/_6sdp"
-            />
-
-
-
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:src="@drawable/logo" />
     </RelativeLayout>
 
+    <!-- Main Content Section -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/first_layout"
-        android:paddingHorizontal="@dimen/_30sdp"
-        >
+        android:layout_below="@id/logo_section"
+        android:paddingHorizontal="@dimen/_30sdp">
 
-        <!-- Title Section -->
+        <!-- Title and Subtitle -->
         <LinearLayout
             android:id="@+id/title_section"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginTop="@dimen/_16sdp"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-            <!-- Title: Sign In -->
             <TextView
-                android:id="@+id/title_sign_in"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign In"
+                android:text="@string/sign_in"
+                android:textColor="@color/purple"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="@color/background_start" />
+                android:textStyle="bold" />
 
-            <!-- Subtitle -->
             <TextView
-                android:id="@+id/subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Use Your Fellow Account"
-                android:textSize="14sp"
-                android:textColor="@color/background_start"
-                android:layout_marginTop="8dp" />
+                android:layout_marginTop="8dp"
+                android:text="@string/use_fellow_account"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
         </LinearLayout>
 
-        <!-- Username Input -->
+        <!-- Username Input Field -->
         <LinearLayout
-            android:id="@+id/username_layout"
+            android:id="@+id/username_section"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_below="@id/title_section"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/username_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_18sdp"
                 android:text="User Name"
-                android:textColor="@color/background_start"
+                android:textColor="@color/gray"
                 android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/username_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter User Name"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/green_border"
+                android:drawableStart="@drawable/baseline_person_24"
+                android:drawablePadding="8dp"
+                android:hint="@string/enter_username"
+                android:inputType="text"
                 android:paddingVertical="@dimen/_10sdp"
                 android:paddingStart="20dp"
-                android:drawableStart="@drawable/human"
-                android:inputType="text"
-                android:drawablePadding="8dp"
-                android:background="@drawable/input_field_background"
                 android:textSize="15sp"
-                android:layout_marginTop="8dp" />
+                android:layout_alignParentStart="true" />
+
         </LinearLayout>
 
-        <!-- Password Input -->
+        <!-- Password Input Field -->
         <LinearLayout
-            android:id="@+id/password_layout"
+            android:id="@+id/password_section"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_below="@id/username_layout"
-            android:layout_marginTop="16dp">
+            android:layout_below="@id/username_section"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/password_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_18sdp"
                 android:text="Password"
-                android:textColor="@color/background_start"
+                android:textColor="@color/gray"
                 android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/password_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter your password"
-                android:paddingStart="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/green_border"
                 android:drawableStart="@drawable/outline_lock_24"
-                android:inputType="textPassword"
-                android:textSize="15sp"
                 android:drawablePadding="8dp"
+                android:hint="@string/enter_password"
+                android:inputType="textPassword"
                 android:paddingVertical="@dimen/_10sdp"
-                android:background="@drawable/input_field_background"
-                android:layout_marginTop="8dp" />
+                android:paddingStart="20dp"
+                android:textSize="15sp" />
+
         </LinearLayout>
 
-        <!-- Remember Me and Forgot Password -->
+        <!-- Options Section -->
         <RelativeLayout
             android:id="@+id/options_section"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_below="@id/password_layout"
-            android:layout_marginTop="16dp"
-            >
+            android:layout_below="@id/password_section"
+            android:layout_marginTop="16dp">
 
             <CheckBox
-                android:id="@+id/remember_me_checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Remember me"
-                android:textColor="@color/background_start" />
+                android:text="@string/remember_me"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
 
             <TextView
-                android:id="@+id/forgot_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Forgot password?"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:textColor="@color/background_start" />
+                android:text="@string/forgot_password"
+                android:textColor="@color/purple" />
         </RelativeLayout>
 
         <!-- Sign In Button -->
@@ -171,27 +166,42 @@
             android:id="@+id/sign_in_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sign in"
-            android:backgroundTint="#7D27EB"
-            android:elevation="5dp"
-            android:paddingVertical="15dp"
-            android:textColor="@android:color/white"
             android:layout_below="@id/options_section"
-            android:layout_marginTop="16dp" />
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:backgroundTint="@color/purple"
+            android:elevation="@dimen/_20sdp"
+            android:paddingVertical="15dp"
+            android:text="@string/sign_in_button"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
-        <!-- Sign Up Link -->
-        <TextView
-            android:id="@+id/sign_up_link"
+        <!-- Sign Up Link Section -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Don't have an account? Sign Up here"
-            android:textColor="@color/background_start"
             android:layout_below="@id/sign_in_button"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="@dimen/_8sdp"
+            android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dont_have_account"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/sign_up_here"
+                android:textColor="@color/purple"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
     </RelativeLayout>
-
-
 </RelativeLayout>

@@ -5,7 +5,6 @@
 
     <!-- Background Gradient -->
     <color name="background_start">#712BF4</color>
-    <color name="background_mid">#5626F8</color>
     <color name="background_end">#4B24F9</color>
 
     <!-- Selection Colors -->

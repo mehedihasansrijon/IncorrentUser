@@ -1,3 +1,23 @@
 <resources>
+    <!-- Application Name -->
     <string name="app_name">Incorrent User</string>
+
+    <!-- Sign In Related Text -->
+    <string name="sign_in">Sign In</string>
+    <string name="use_fellow_account">Use Your Fellow Account</string>
+    <string name="enter_username">Enter User Name</string>
+    <string name="enter_password">Enter your password</string>
+
+    <!-- Remember Me Option -->
+    <string name="remember_me">Remember me</string>
+
+    <!-- Forgot Password Link -->
+    <string name="forgot_password">Forgot password?</string>
+
+    <!-- Button Text -->
+    <string name="sign_in_button">Sign in</string>
+
+    <!-- Account Registration Text -->
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="sign_up_here">Sign Up here</string>
 </resources>

@@ -4,11 +4,5 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="android:statusBarColor">#8E28E9</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
     </style>
-
-    <style name="Theme.IncorrentUser" parent="Base.Theme.IncorrentUser" />
-
-
-
 </resources>
